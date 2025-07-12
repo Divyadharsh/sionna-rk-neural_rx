@@ -1,0 +1,24 @@
+# this is a template. remove the .template extension to use
+# contents of this file will be merged automatically with docker-compose.yaml
+# uncomment the relevant lines
+
+
+services:
+  oai-gnb:
+    volumes:
+      ##### Data capture tutorial; ensure that .txt files exist and have the right permissions (666)
+      #- ../../logs/demapper_in.txt:/opt/oai-gnb/demapper_in.txt
+      #- ../../logs/demapper_out.txt:/opt/oai-gnb/demapper_out.txt
+      ##### neural demapper tutorial; mount weights and trtengine config
+      # - ../../tutorials/neural_demapper/models/:/opt/oai-gnb/models
+      # - ./demapper_trt.config:/opt/oai-gnb/demapper_trt.config
+    # Run gdbserver for debugging
+    #command: ["gdbserver",":7777","/opt/oai-gnb/bin/nr-softmodem","-O","/opt/oai-gnb/etc/gnb.conf"]
+    # Profile with Nsight Systems
+    #stdin_open: true # docker run -i
+    #tty: true        # docker run -t
+    #entrypoint: /bin/bash
+    #cap_add:
+    # - SYS_ADMIN
+    #volumes:
+    # - /opt/nvidia/nsight-systems/:/opt/nvidia/nsight-systems
