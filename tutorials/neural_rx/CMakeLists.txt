@@ -20,10 +20,10 @@ set(PHY_NEURAL_RX_CAPTURE_SRC
   ${CMAKE_CURRENT_SOURCE_DIR}/nr_neural_rx_capture.c
 )
 
-add_library(demapper_neural_rx_capture MODULE ${PHY_NEURAL_RX_CAPTURE_SRC})
+add_library(neural_rx_capture MODULE ${PHY_NEURAL_RX_CAPTURE_SRC})
 
 # Add include directories so headers can be found
-target_include_directories(demapper_neural_rx_capture PRIVATE
+target_include_directories(neural_rx_capture PRIVATE
   ${OPENAIR1_DIR}
   ${OPENAIR1_DIR}/PHY
   ${OPENAIR1_DIR}/PHY/NR_TRANSPORT
@@ -37,10 +37,10 @@ target_include_directories(demapper_neural_rx_capture PRIVATE
 
 
 # Link pthread and any OAI libraries your code depends on
-target_link_libraries(demapper_neural_rx_capture PRIVATE pthread)
+target_link_libraries(neural_rx_capture PRIVATE pthread)
 
 # Add any dependencies your module has
-add_dependencies(nr-softmodem demapper_neural_rx_capture)
-add_dependencies(nr-uesoftmodem demapper_neural_rx_capture)
-add_dependencies(demapper_neural_rx_capture generate_T)
+add_dependencies(nr-softmodem neural_rx_capture)
+add_dependencies(nr-uesoftmodem neural_rx_capture)
+add_dependencies(neural_rx_capture generate_T)
 
