@@ -17,5 +17,5 @@ typedef int(neural_rx_extract_rbs_t)( c16_t* const rxdataF,
                                  nfapi_nr_pusch_pdu_t *pusch_pdu,
                                  NR_DL_FRAME_PARMS *frame_parms);
 
-#endif
+#endif  // __NR_NEURAL_RX_DEFS_H__
 

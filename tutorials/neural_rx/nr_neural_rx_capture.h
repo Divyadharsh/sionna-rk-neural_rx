@@ -22,7 +22,7 @@ int32_t neural_rx_init( void );
 
 int32_t neural_rx_shutdown( void );
 
-static void nr_ulsch_extract_rbs(c16_t* const rxdataF,
+int neural_rx_extract_rbs(c16_t* const rxdataF,
                                  c16_t* const chF,
                                  c16_t *rxFext,
                                  c16_t *chFext,

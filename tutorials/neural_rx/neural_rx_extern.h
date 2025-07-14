@@ -21,4 +21,4 @@ neural_rx_initfunc_t        neural_rx_init;
 neural_rx_shutdownfunc_t    neural_rx_shutdown;
 neural_rx_extract_rbs_t neural_rx_extract_rbs;
 
-#endif
+#endif // _NR_NEURAL_RX_EXTERN_H__

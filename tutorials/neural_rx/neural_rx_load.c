@@ -5,11 +5,11 @@ SPDX-License-Identifier: Apache-2.0
 #include "common/config/config_userapi.h"
 #include "common/utils/LOG/log.h"
 #include "common/utils/load_module_shlib.h"
-#include "demapper_neural_rx_extern.h"
+#include "neural_rx_extern.h"
 
 // TODO: Q: can this be inside the loader function?
 /* demapper_arg is used to initialize the config module so that the loader works as expected */
-static char *neural_rx_arg[64]={"demapper_neural_rx_test",NULL};
+static char *neural_rx_arg[64]={"neural_rx_test",NULL};
 
 
 static int32_t neural_rx_no_thread_init() {

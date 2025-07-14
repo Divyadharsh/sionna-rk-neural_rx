@@ -11,6 +11,9 @@
 #add_dependencies(nr-uesoftmodem neural_rx_capture)
 #add_dependencies(neural_rx_capture generate_T)
 
+# START marker-plugin-cmake
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIT})
+
 # Set your OpenAirInterface root and paths if not set already
 set(OPENAIR1_DIR ${CMAKE_SOURCE_DIR}/openair1)
 set(NFAPI_DIR ${CMAKE_SOURCE_DIR}/nfapi/open-nFAPI/nfapi/)
